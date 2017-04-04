@@ -1,5 +1,13 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div(id="home-page")
+    include header
+    main
+      section(id="landing")
+      section(id="about")
+      section(id="portfolio")
+      section(id="skills")
+      section(id="contact")
+  include footer
+

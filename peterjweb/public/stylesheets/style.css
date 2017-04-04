@@ -1,8 +1,83 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+h1,h2,h3,h4,h5,p,a {
+	margin: 0;
+	padding: 0;
 }
 
-a {
-  color: #00B7FF;
+#home-page {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+#home-page header {
+  flex: 0 0 140px;
+  background-color: lightgreen; 
+}
+.nav-position {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+main {
+  flex: 1 1;
+  background-color: skyblue;
+  margin: 0;
+  padding: 0;
+}
+#about, #portfolio, #skills, #contact {
+  height: 700px;
+  margin: 0;
+  padding: 3px 30px 30px 30px;
+}
+#landing {
+  background-color: pink;
+  height: 100vh;
+}
+#about {
+  background-color: lightblue;
+}
+#portfolio {
+  background-color: lightyellow;
+}
+#skills {
+  background-color: purple;
+}
+#contact {
+	background-color: #777;
+}
+footer {
+	height: 300px;
+	background-color: #000;
+}
+
+/* 
+	MOBILE FIRST  
+*/
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+
+}
+
+/* Larger than phablet */
+@media (min-width: 550px) {
+
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+	
 }
