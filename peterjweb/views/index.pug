@@ -1,13 +1,46 @@
 extends layout
 
 block content
-  div(id="home-page")
+  #home-page
     include header
     main
-      section(id="landing")
-      section(id="about")
-      section(id="portfolio")
-      section(id="skills")
-      section(id="contact")
+      section#landing
+        h1 Welcome 
+        h3 I'm A Web Developer
+      section#about
+        h2 Peter Jacobs
+        .flex-container
+          .about-text
+            p.
+              I'm a web designer and developer based in the San Francisco Bay Area. More commonly known as Silicon Valley. I have a passion for both web design and development and love to create fast responsive websites for all screen sizes and types.
+            p.
+              Born in the U.K. in a town called Swindon 31yrs11m19d ago, however I have now lived in california for 17y1m22d. I studied Digital Design and Animation at <a href="http://cogswell.edu/" target="_blank"> Cogswell Polytechnical college</a> in Sunnyvale. Where web design and development was first introduced to me.
+            p. 
+              Me and my wife recently welcomed our first child into the world, and are overjoyed. In my ever decreasing spare time I enjoy watching and playing football (soccer), the odd video game here and there and listening to music way too loud on my headphones.
+          .about-img.flex-container
+              img(src="./images/about-peter.png")
+      section#portfolio
+        h2 Portfolio
+        #projects
+          .project
+            p  Project 1
+          .project
+            p  Project 2
+          .project
+            p  Project 3
+          .project
+            p  Project 4
+          .project
+            p  Project 5
+          .project
+            p  Project 6
+          .project
+            p  Project 6
+          .project
+            p  Project 6
+      section#skills
+        h2 Skills
+      section#contact
+        h2 Contact
   include footer
 

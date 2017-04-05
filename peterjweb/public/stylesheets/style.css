@@ -1,83 +1,225 @@
-body {
-	margin: 0;
-	padding: 0;
+/*
+------RESET
+*/
+* {
+  box-sizing: border-box;
 }
+body {
+  margin: 0;
+  padding: 0;
+}
+/* 
+------TYPOGRAPHY 
+*/
 h1,h2,h3,h4,h5,p,a {
 	margin: 0;
 	padding: 0;
+  font-family: 'Raleway', sans-serif;
 }
+p {
+  font-weight: lighter;
+  line-height: 1.5;
+  color: #fff;
+}
+h1 {
 
+}
+h2 {
+  margin-bottom: 20px;
+}
+/* 
+------Globals/Utilities
+*/
 #home-page {
   display: flex;
   margin: 0;
   padding: 0;
 }
+.flex-container {
+  display: flex;
+}
+/* 
+------NAVIGATION 
+*/
 #home-page header {
-  flex: 0 0 140px;
-  background-color: lightgreen; 
+  flex: 0 0 145px;
+  background-color: ghostwhite;
 }
 .nav-position {
   position: fixed;
   top: 0;
-  left: 0;
+  left: 5px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+.nav-position .logo {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  display: block;
+  text-align: right;
+}
+.nav-position a:link {
+  color: #000;
+}
+.nav-position a:visited {
+  color: #000;
+}
+.nav-position a:hover {
+  color: #333;
+}
+.nav-position a:active {
+  color: #eee;
+  background-color: #000;
+}
+.nav-position ul {
+  list-style-type: none;
+  margin-top: 20px 0 0 0;
+  padding: 0;
+  text-align: right;
+}
+.nav-position ul li a {
+  display: block;
+  color: #999;
+  text-decoration: none;
+}
+.nav-position .cta {
+  color: skyblue;
+  text-align: right;
+  margin-bottom: 20px;
+}
+.nav-position .cta a {
+  text-decoration: none;
+  padding: 3px;
+
+}
+/* 
+------MAIN CONTENT  
+*/
 main {
   flex: 1 1;
   background-color: skyblue;
   margin: 0;
   padding: 0;
+
 }
 #about, #portfolio, #skills, #contact {
-  height: 700px;
-  margin: 0;
-  padding: 3px 30px 30px 30px;
+  padding: 30px;
 }
+/* 
+------LANDING 
+*/
 #landing {
-  background-color: pink;
+  background-color: #fff;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+#landing h1 {
+  font-size: 8rem;
+}
+#landing h2 {
+  font-size: 3rem;
+}
+
+/* 
+------ABOUT 
+*/
 #about {
-  background-color: lightblue;
+  background-color: #000;
 }
+#about .flex-container {
+  display: flex;
+  flex-direction: row;
+}  
+#about h2 {
+  color: #fff;
+}
+.about-text {
+  flex: 1;
+}
+.about-img {
+   flex: 1;
+   justify-content: center;
+   align-items: center;
+}
+.about-img img {
+  max-width: 300px;
+}
+
+/* 
+------PORTFOLIO 
+*/
 #portfolio {
-  background-color: lightyellow;
+  background-color: #fff;
 }
+#portfolio h2 {
+
+}
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.project {
+  background-color: #888;
+  height: 250px;
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+/* 
+------SKILLS 
+*/
 #skills {
   background-color: purple;
 }
+
+/* 
+------CONTACT 
+*/
 #contact {
 	background-color: #777;
 }
+
+/* 
+------FOOTER 
+*/
 footer {
 	height: 300px;
 	background-color: #000;
 }
 
 /* 
-	MOBILE FIRST  
+-----MEDIA QUERIES  
 */
 
-/* Larger than mobile */
-@media (min-width: 400px) {
+/* Smaller than mobile */
+@media (max-width: 400px) {
 
 }
 
-/* Larger than phablet */
-@media (min-width: 550px) {
+/* Smaller than phablet */
+@media (max-width: 550px) {
 
 }
 
-/* Larger than tablet */
-@media (min-width: 750px) {
+/* Smaller than tablet */
+@media (max-width: 750px) {
+  .flex-container {
+    display: block
+  }
+}
+
+/* Smaller than desktop */
+@media (max-width: 1000px) {
 
 }
 
-/* Larger than desktop */
-@media (min-width: 1000px) {
-
-}
-
-/* Larger than Desktop HD */
-@media (min-width: 1200px) {
+/* Smaller than Desktop HD */
+@media (max-width: 1200px) {
 	
 }
