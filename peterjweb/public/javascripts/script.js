@@ -30,9 +30,9 @@ $(window).scroll(function() {
 	};
 
 	//Footer Reveal 
-	// if (wScroll > $('#contact').offset().top) {
-	// 	$(".nav-position").removeClass("nav-position-full").addClass("nav-position-mini");
-	// } else {
-	// 	$(".nav-position").removeClass("nav-position-mini").addClass("nav-position-full");
-	// }
+	if (wScroll > $('#contact').offset().top) {
+		$(".nav-position").removeClass("nav-position-full").addClass("nav-position-mini");
+	} else {
+		$(".nav-position").removeClass("nav-position-mini").addClass("nav-position-full");
+	}
 });

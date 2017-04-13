@@ -74,22 +74,23 @@ block content
             li Terminal
       section#contact
         h2 Contact
-        .flex-container 
-          form(action="https://peterjweb.com", method="post") 
+        .flex-container       
+          form(action="https://formspree.io/thisispeterj@gmail.com" method="POST") 
             fieldset
               legend  Lets work together
               
               label(for="name") Your Name 
-                input(type="text",name="client_name")
+                input(type="text",name="name")
             
               label(for="email") An Email address
-                input(type="email",name="client_email") 
+                input(type="email",name="_replto") 
                         
               label(for="phone") Phone Number  
-                input(type="phone",name="client_phone")
+                input(type="phone",name="phone")
             fieldset
               legend Tell me about your project
-                textarea You don't have to go crazy here, just a general outline is great.
+                textarea(name="textarea")
+            button(type="submit", value="send") Submit 
           .contact-info
             h3 My information
             ul
@@ -97,8 +98,6 @@ block content
               li  See my <a href="https://www.linkedin.com/in/peterjweb/" target="_blank">Linkedin</a> for more information
               li  Check out my <a href="https://github.com/peterjweb" target="_blank">Github</a> and <a href="http://codepen.io/peterjweb/" target="_blank">Codepens</a> to see code
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26706.802333590105!2d-121.55107559820239!3d36.846233116085266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8091f8d2ba2751e9%3A0x636fdfcd9df5bb64!2sSan+Juan+Bautista%2C+CA+95045!5e1!3m2!1sen!2sus!4v1490663482410" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-        button(type="submit")  
-          a(href="#")  Send Message
   include footer
 
 

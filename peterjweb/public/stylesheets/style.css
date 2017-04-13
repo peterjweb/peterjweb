@@ -317,7 +317,7 @@ main {
 }
 #contact textarea {
   outline-color: deepskyblue;
-  width: 90%;
+  width: 100%;
   border: none;
   padding: 10px;
   height: 150px;
@@ -331,7 +331,7 @@ main {
   padding: 0;
   border: none;
 }
-#contact button a {
+#contact button {
   text-decoration: none;
   display: block;
   padding: 20px;
@@ -340,7 +340,7 @@ main {
   border: 1px solid #333;
   background-color: #fff;
 }
-#contact button a:hover {
+#contact button:hover {
   color: #fff;
   background-color: #000;
 }
