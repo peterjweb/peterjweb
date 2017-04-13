@@ -7,19 +7,32 @@
 body {
   margin: 0;
   padding: 0;
+  position: relative;
 }
+
 /* 
 ------TYPOGRAPHY 
 */
-h1,h2,h3,h4,h5,p,a {
+h1,h2,h3,h4,h5,p,a,span,legend,label,input,textarea {
 	margin: 0;
 	padding: 0;
   font-family: 'Raleway', sans-serif;
+}
+li {
+  font-family: 'Raleway', sans-serif; 
 }
 p {
   font-weight: lighter;
   line-height: 1.5;
   color: #fff;
+  margin-bottom: 20px;
+}
+a {
+  color: #333;
+  text-decoration: none;
+  background-color: #00bfff;
+  padding: 3px;
+  font-weight: lighter;
 }
 h1 {
 
@@ -34,9 +47,12 @@ h2 {
   display: flex;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 .flex-container {
   display: flex;
+  margin: 0;
+  padding: 0;
 }
 /* 
 ------NAVIGATION 
@@ -49,16 +65,22 @@ h2 {
   position: fixed;
   top: 0;
   left: 5px;
-  min-height: 100%;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.nav-position-full {
+  min-height: 100%;
+}
+.nav-position-mini {
+  bottom: 300px;
+  transition: bottom 1s ease;
 }
 .nav-position .logo {
   font-size: 1.5rem;
   margin-top: 20px;
   display: block;
   text-align: right;
+  background-color: ghostwhite;
 }
 .nav-position a:link {
   color: #000;
@@ -67,7 +89,8 @@ h2 {
   color: #000;
 }
 .nav-position a:hover {
-  color: #333;
+  color: #00bfff;
+  background-color: #000;
 }
 .nav-position a:active {
   color: #eee;
@@ -83,6 +106,7 @@ h2 {
   display: block;
   color: #999;
   text-decoration: none;
+  background-color: ghostwhite;
 }
 .nav-position .cta {
   color: skyblue;
@@ -92,7 +116,7 @@ h2 {
 .nav-position .cta a {
   text-decoration: none;
   padding: 3px;
-
+  background-color: #00bfff;
 }
 /* 
 ------MAIN CONTENT  
@@ -111,24 +135,31 @@ main {
 ------LANDING 
 */
 #landing {
-  background-color: #fff;
+  background-image: url('/images/landing.jpg');
+  background-size: cover;
+  background-attachment: fixed;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: left;
 }
 #landing h1 {
   font-size: 8rem;
+  margin-left: 5vw;
+  color: #fff;
 }
-#landing h2 {
+#landing h3 {
   font-size: 3rem;
+  margin-left: 5vw;
+  color: #fff;
 }
 
 /* 
 ------ABOUT 
 */
 #about {
+  padding: 30px 80px;
   background-color: #000;
 }
 #about .flex-container {
@@ -140,6 +171,15 @@ main {
 }
 .about-text {
   flex: 1;
+}
+.about-text a {
+  color: #333;
+  text-decoration: none;
+  background-color: #00bfff;
+  padding: 3px;
+}
+.about-text span {
+  color: deepskyblue;
 }
 .about-img {
    flex: 1;
@@ -156,43 +196,178 @@ main {
 #portfolio {
   background-color: #fff;
 }
-#portfolio h2 {
-
-}
 #projects {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.project {
-  background-color: #888;
+#projects .project {
+  background-color: cornflowerblue;
   height: 250px;
-  width: 250px;
-  margin-bottom: 20px;
+  width: 550px;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(20px;);
+  transition: all 0.3s ease-in-out;
 }
-
+#projects .show-elements {
+  opacity: 1;
+  transform: translateX(0px);
+}
+.project a {
+  background-color: cornflowerblue;
+  color: #fff;
+  line-height: 250px;
+  width: 100%;
+  text-align: center;
+}
 /* 
 ------SKILLS 
 */
 #skills {
-  background-color: purple;
+  background-color: #000;
 }
+#skills h2 {
+  color: #fff;
+}
+#skills .skills-chart {
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#skills .skills-chart .skill {
+  background: cornflowerblue;
+  overflow: hidden;
+  border-radius: 5px;  
+  padding: 3px;
+}
+#skills .skills-chart .skill .progress {
+  display: block;
+  height: 25px;
+  background-color: deepskyblue;
+  border-radius: 3px;
+  padding: 3px;
+  width: 0;
+  overflow: hidden;
+  text-align: center;
+  opacity: 0;
+  transition: width 2s ease;
+}
+.skills-text {
+  flex: 1;
+  padding: 0 20px 20px 20px;
+}
+#skills .tech-list {
+  margin-top: 30px;
+  background-color: #fff;
+  flex-grow: 1;
+  width: 100%;
+  padding: 0 0 30px 0;
+}
+#skills .tech-list h3 {
+  color: #999;
+  text-align: center;
+  padding-top: 20px;
 
+}
+#skills .tech-list ul {
+  margin: 0 10px;
+  flex-wrap: wrap;
+}
+#skills .tech-list ul li {
+  flex-grow: 1;
+  list-style-type: none;
+  text-align: center;
+  width: 20vw;
+  padding-top: 50px;
+  color: #999;
+  font-size: 1.3rem;
+  font-weight: 300;
+}
 /* 
 ------CONTACT 
 */
 #contact {
-	background-color: #777;
+	background-color: #efefef;
 }
-
+#contact form {
+  flex-grow: 1;
+}
+#contact fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+#contact legend {
+  margin-bottom: 10px;
+}
+#contact input {
+  outline-color: deepskyblue; 
+  margin: 10px 0 30px 0;
+  padding: 10px;
+  display: block;
+  border: none;
+  height: 30px;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  line-height: 1.7;
+  width: 90%;
+}
+#contact textarea {
+  outline-color: deepskyblue;
+  width: 90%;
+  border: none;
+  padding: 10px;
+  height: 150px;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+#contact button {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+#contact button a {
+  text-decoration: none;
+  display: block;
+  padding: 20px;
+  font-size: 1.2rem;  
+  color: #000;
+  border: 1px solid #333;
+  background-color: #fff;
+}
+#contact button a:hover {
+  color: #fff;
+  background-color: #000;
+}
+#contact .contact-info {
+  flex-grow: 1;
+}
 /* 
 ------FOOTER 
 */
 footer {
+  padding: 30px;
 	height: 300px;
 	background-color: #000;
 }
-
+footer p {
+  text-align: left;
+  margin-bottom: 30px;
+}
+footer ul {
+  text-align: left;
+  padding: 0;
+  margin-bottom: 30px;
+}
+footer ul li a {
+  padding: 10px;
+  margin-right: 10px;
+}
 /* 
 -----MEDIA QUERIES  
 */
@@ -210,7 +385,8 @@ footer {
 /* Smaller than tablet */
 @media (max-width: 750px) {
   .flex-container {
-    display: block
+    display: block;
+    width: 100%;
   }
 }
 

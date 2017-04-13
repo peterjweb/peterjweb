@@ -14,7 +14,7 @@ block content
             p.
               I'm a web designer and developer based in the San Francisco Bay Area. More commonly known as Silicon Valley. I have a passion for both web design and development and love to create fast responsive websites for all screen sizes and types.
             p.
-              Born in the U.K. in a town called Swindon 31yrs11m19d ago, however I have now lived in california for 17y1m22d. I studied Digital Design and Animation at <a href="http://cogswell.edu/" target="_blank"> Cogswell Polytechnical college</a> in Sunnyvale. Where web design and development was first introduced to me.
+              Born in the U.K. in a town called Swindon <span class="myAge"></span> years ago, however I have now lived in california for <span class="residence"></span> years. I studied Digital Design and Animation at <a href="http://cogswell.edu/" target="_blank"> Cogswell Polytechnical college</a> in Sunnyvale. Where web design and development was first introduced to me.
             p. 
               Me and my wife recently welcomed our first child into the world, and are overjoyed. In my ever decreasing spare time I enjoy watching and playing football (soccer), the odd video game here and there and listening to music way too loud on my headphones.
           .about-img.flex-container
@@ -22,25 +22,85 @@ block content
       section#portfolio
         h2 Portfolio
         #projects
-          .project
-            p  Project 1
-          .project
-            p  Project 2
-          .project
-            p  Project 3
-          .project
-            p  Project 4
-          .project
-            p  Project 5
-          .project
-            p  Project 6
-          .project
-            p  Project 6
-          .project
-            p  Project 6
+          .project.flex-container
+            a(href="http://codepen.io/peterjweb/" target="_blank") Codepens Various
+          .project.flex-container
+            a(href="https://github.com/peterjweb/" target="_blank") Github Fork me
+          .project.flex-container
+            p  Coming Soon
+          .project.flex-container
+            a(href="#contact") This could be your project!
       section#skills
         h2 Skills
+        .flex-container
+          .skills-chart.flex-container
+            .skill
+              span(class="progress" data-width="90") Development                             
+            .skill
+              span(class="progress" data-width="80")  Design                 
+            .skill
+              span(class="progress" data-width="90") HTML                  
+            .skill
+              span(class="progress" data-width="85")  CSS                   
+            .skill
+              span(class="progress" data-width="75")  Javascript                           
+          .skills-text
+            p.
+              I have been very fortunate to grow up in Silicon Valley in and around some of the greatest Developers and Designers in the world. Along the way I have picked up a few tips and tricks myself. I'm always looking to expand on what I already know, and enjoy looking to the future of the industry and what it will bring.
+            p.
+              My main focus is Front End web development, although I have a solid grounding in design. I enjouy working on UX/UI as it bridges both Design and Development and allows me to showcase my creativity and talents.
+        .tech-list
+          h3 Web Technologies I have worked with
+          ul.flex-container              
+            li HTML5
+            li Jade/Pug.js
+            li CSS3
+            li Bootstrap
+            li Foundation
+            li Less
+            li Sass
+            li Javscript
+            li jQuery
+            li Node.js
+            li Express.js
+            li Angular.js
+            li Git
+            li Gulp
+            li Jira
+            li Wordpress
+            li Linix
+            li Unix
+            li Windows
+            li Terminal
       section#contact
         h2 Contact
+        .flex-container 
+          form(action="https://peterjweb.com", method="post") 
+            fieldset
+              legend  Lets work together
+              
+              label(for="name") Your Name 
+                input(type="text",name="client_name")
+            
+              label(for="email") An Email address
+                input(type="email",name="client_email") 
+                        
+              label(for="phone") Phone Number  
+                input(type="phone",name="client_phone")
+            fieldset
+              legend Tell me about your project
+                textarea You don't have to go crazy here, just a general outline is great.
+          .contact-info
+            h3 My information
+            ul
+              li  Located in San Juan Bautista California
+              li  See my <a href="https://www.linkedin.com/in/peterjweb/" target="_blank">Linkedin</a> for more information
+              li  Check out my <a href="https://github.com/peterjweb" target="_blank">Github</a> and <a href="http://codepen.io/peterjweb/" target="_blank">Codepens</a> to see code
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26706.802333590105!2d-121.55107559820239!3d36.846233116085266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8091f8d2ba2751e9%3A0x636fdfcd9df5bb64!2sSan+Juan+Bautista%2C+CA+95045!5e1!3m2!1sen!2sus!4v1490663482410" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        button(type="submit")  
+          a(href="#")  Send Message
   include footer
+
+
+
 
